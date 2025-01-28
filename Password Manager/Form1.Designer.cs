@@ -35,17 +35,20 @@
             label3 = new Label();
             button1 = new Button();
             button2 = new Button();
+            label4 = new Label();
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(112, 9);
+            label1.Location = new Point(134, 9);
             label1.Name = "label1";
             label1.Size = new Size(347, 54);
             label1.TabIndex = 0;
             label1.Text = "Welcome Back";
+            label1.Click += label1_Click;
             // 
             // txtUserName
             // 
@@ -81,7 +84,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(220, 348);
+            button1.Location = new Point(220, 366);
             button1.Name = "button1";
             button1.Size = new Size(103, 36);
             button1.TabIndex = 6;
@@ -91,18 +94,42 @@
             // 
             // button2
             // 
-            button2.Location = new Point(339, 348);
+            button2.Location = new Point(339, 366);
             button2.Name = "button2";
             button2.Size = new Size(109, 36);
             button2.TabIndex = 7;
             button2.Text = "Sign up";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.ForeColor = Color.Red;
+            label4.Location = new Point(220, 333);
+            label4.Name = "label4";
+            label4.Size = new Size(134, 20);
+            label4.TabIndex = 8;
+            label4.Text = "Incorrect password";
+            label4.Click += label4_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(547, 419);
+            button3.Name = "button3";
+            button3.Size = new Size(79, 29);
+            button3.TabIndex = 9;
+            button3.Text = "Exit";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(619, 450);
+            ClientSize = new Size(626, 450);
+            Controls.Add(button3);
+            Controls.Add(label4);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label3);
@@ -126,5 +153,7 @@
         private Label label3;
         private Button button1;
         private Button button2;
+        private Label label4;
+        private Button button3;
     }
 }
